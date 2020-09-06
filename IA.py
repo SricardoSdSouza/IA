@@ -14,7 +14,7 @@ cascade_faces = "/content/gdrive/My Drive/IA/Imagens/haarcascade_frontalface_def
 caminho_modelo = "/content/gdrive/My Drive/IA/Imagens/reconhecer.h5"
 face_detection = cv2.cascadeClasifier(cascade_faces)
 classificador_emocoes = load_model(caminho_modelo, compile=True)
-expressões = ["Raiva", "Nojo","Medo","Feliz","Triste","Surpreso","Neutro"]
+expressoes = ["Raiva", "Nojo","Medo","Feliz","Triste","Surpreso","Neutro"]
 faces = faces_detection.detedtMultiScale(image,scaleFactor = 1.1,minNeighbors=3,minSize=(20,20))
 faces
 cinza = cv2.cvtColor(image, cv2.color_BGR2GRAY)
