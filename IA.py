@@ -17,10 +17,10 @@ classificador_emocoes = load_model(caminho_modelo, compile=True)
 expressoes = ["Raiva", "Nojo","Medo","Feliz","Triste","Surpreso","Neutro"]
 face = face_detection.detectMultiScale(image,scaleFactor = 1.1,minNeighbors=3,minSize=(20,20))
 faces
-cinza = cv2.cvtColor(image, cv2.color_BGR2GRAY)
+cinza = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 #CV2_imshow(cinza)
 CV2.imshow(cinza)
-roi = cinza[faces[0][1]:faces[0][1] + faces[0][2],faces[0][0]:faces[0][0] + faces[0][2]]
+roi = cinza[face[0][1]:face[0][1] + face[0][2],face[0][0]:face[0][0] + face[0][2]]
 cv2_imshow(roi)
 roi = cv2.resize(roi,(48,48))
 cv2_imshow(roi)
